@@ -14,7 +14,11 @@ MTD is a scalable algorithm tested on real road networks with up to [28 million 
 I am currently working on a high performance [Julia](https://julialang.org/) implementation of the MTD algorithm based on a similar graph representation.
 
 ## Clustering heuristics for solving the P-Median problem
-`pMedian.py` is a clustering heuristic based on [(Klincewicz, 1991)](https://www.sciencedirect.com/science/article/abs/pii/037722179190090I) heuristic for p-hub median problem. The clustering algorithm is used in [(Ghanbartehrani & Porter, 2018)](https://digitalcommons.georgiasouthern.edu/pmhr_2018/6/) to solve a p-median problem with over 3,000 demand points, 150 clusters, on a network with over 28 million nodes.
+`pMedian.py` is a clustering heuristic based on [Klincewicz (1991)](https://www.sciencedirect.com/science/article/abs/pii/037722179190090I) heuristic for p-hub median problem. The clustering algorithm is used in [(Ghanbartehrani & Porter, 2018)](https://digitalcommons.georgiasouthern.edu/pmhr_2018/6/) to solve a p-median problem with over 3,000 demand points and 150 facilities, on a road network with over 28 million nodes.
 
 ## The sample graph
 `TestData.csv` and `graph.json` files in `graph` folder are the real road network for the city of Rockford, Illinois retrieved from [OpenStreetMap](https://www.openstreetmap.org) project. The graph consists of 19,836 nodes and 27,970 edges.
+
+## Coming soon: visualization
+I tried [geoplot](https://residentmario.github.io/geoplot/index.html) and [geopandas](https://geopandas.org/) to visualize the demand points and facility locations on map. I spent hours just to get everything installed (had to install anaconda, reset my environment, and used some advice from [this](https://github.com/ResidentMario/geoplot/issues/38) thread to resolve conflicts) just to see how disappointing the plots look compared to what [LeafLet](https://leafletjs.com/) generates with just a few lines of code and a 650 KB library.
+I will add an interactive data visualization module in JavaScript/LeafLet soon.
